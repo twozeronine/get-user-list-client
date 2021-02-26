@@ -20,7 +20,7 @@ const errorLink = onError(({ graphqlErrors, networkError }) => {
 
 const link = from([
   errorLink,
-  new HttpLink({ uri: "http://localhost:3002/graphql" }),
+  new HttpLink({ uri: "https://userlistgetwebapp.herokuapp.com/graphql" }),
 ]);
 
 const client = new ApolloClient({
@@ -32,8 +32,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       {""}
-      {/* <GetUsers></GetUsers> */}
       <Form></Form>
+      <GetUsers></GetUsers>
     </ApolloProvider>
   );
 }

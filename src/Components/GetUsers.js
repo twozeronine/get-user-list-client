@@ -14,7 +14,22 @@ function GetUsers() {
   return (
     <div>
       {users.map((val) => {
-        return <h1> {val.firstName}</h1>;
+        return (
+          <div>
+            <h2>
+              {val.id}. Name: {val.firstName}
+              {val.lastName}
+            </h2>
+            <ul>
+              <li>
+                <p>Email: {val.email}</p>
+              </li>
+              <li>
+                <p>Gender: {val.gender}</p>
+              </li>
+            </ul>
+          </div>
+        );
       })}
     </div>
   );
